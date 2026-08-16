@@ -98,7 +98,7 @@ CosmeticsTab:CreateButton({
         brim.Color = Color3.fromRGB(20, 18, 25)
         table.insert(parts, {part = brim, offsetCFrame = CFrame.new(0, 1.0, 0) * rot90})
 
-        local LAYERS = 16
+        local LAYERS = 40
         local coneHeight = 2.0
         local baseRadius = 4.5
         for i = 1, LAYERS do
@@ -108,7 +108,7 @@ CosmeticsTab:CreateButton({
             local layer = Instance.new("Part")
             layer.Name = "Layer" .. i
             layer.Shape = Enum.PartType.Cylinder
-            layer.Size = Vector3.new(0.16, radius * 2, radius * 2)
+            layer.Size = Vector3.new(0.1, radius * 2, radius * 2)
             layer.Material = Enum.Material.SmoothPlastic
             layer.Color = Lerp(colorBottom, colorTop, t)
             table.insert(parts, {part = layer, offsetCFrame = CFrame.new(0, yOffset, 0) * rot90})
